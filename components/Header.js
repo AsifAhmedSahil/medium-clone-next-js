@@ -8,7 +8,8 @@ const style = {
     content: "max-w-7xl flex-1 flex justify-between",
     logoContainer: "flex items-center flex-start",
     logo: "cursor-pointer object-contain",
-    bannerNav:"flex cursor-pointer space-x-5  items-center"
+    bannerNav:"flex cursor-pointer space-x-5  items-center",
+    accentedButton: "bg-black text-white py-2 px-3 rounded-full"
 
 };
 
@@ -24,7 +25,7 @@ const Header = () => {
             <div>Our Story</div>
             <div>Membership</div>
             <div>Sign in</div>
-            <div>Get Started</div>
+            <div className={style.accentedButton}>Get Started</div>
 
         </div>
       </div>
