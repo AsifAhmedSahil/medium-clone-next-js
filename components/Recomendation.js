@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { AiOutlineSearch } from "react-icons/ai";
 import { MdMarkEmailUnread } from "react-icons/md";
-// import ReplitLogo from "../static/replit.png"
-// import TutorialImg from "../static/tutorial.png"
-// import CPLogo from "../static/cp.png"
+import ReplitLogo from "../static/replit.png";
+// import TutorialImg from "../static/tutorial.png";
+import CPLogo from "../static/cp.png";
 import sahil from "../static/sahil.jpg";
 import JSLogo from "../static/jsLogo.png";
 
@@ -61,6 +61,8 @@ const Recomendation = () => {
         <div className={style.recomendationContainer}>
           <div className={style.title}>More From Medium</div>
           <div className={style.articleContainer}>
+
+            {recomendedPost.map(post => (
             <div className={style.articleContentWrapper}>
               <div className={style.articleContent}>
                 <div className={style.recomendationAuthorContainer}>
@@ -69,21 +71,22 @@ const Recomendation = () => {
                   >
                     <Image src={sahil} height={100} width={100} />
                   </div>
-                  <div className="text-sm">Asif Ahmed Sahil</div>
+                  <div className="text-sm">{post.author.name}</div>
                 </div>
                 <div className="font-bold">
-                  Ultimate Blockchain Course For Beginner
+                  {post.title}
                 </div>
               </div>
               <div className={style.recomendationThumbnailContainer}>
                 <Image
                   className={style.recomendationThumbnail}
-                  src={JSLogo}
+                  src={post.image}
                   height={100}
                   width={100}
                 />
               </div>
             </div>
+            ))}
           </div>
         </div>
       </div>
@@ -91,3 +94,30 @@ const Recomendation = () => {
   );
 };
 export default Recomendation;
+
+const recomendedPost = [
+  {
+    title: "What can You do With Repplit?",
+    image: ReplitLogo,
+    author: {
+      name: "Asif Ahmed sahil",
+      image: CPLogo,
+    },
+  },
+  {
+    title: "javascript and blockchain ultimate course",
+    image: ReplitLogo,
+    author: {
+      name: "Asif Ahmed",
+      image: sahil,
+    },
+  },
+  {
+    title: "how to become a developer in 2022",
+    image: JSLogo,
+    author: {
+      name: "Asif sahil",
+      image: CPLogo,
+    },
+  }
+];
