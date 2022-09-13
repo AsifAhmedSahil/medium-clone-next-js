@@ -1,6 +1,9 @@
+import ReadersNav from "../../components/ReadersNav"
+
 const Post = ()=>{
     return(
-        <h1>POST Page 📯 </h1>
+        
+        <ReadersNav/>
 
     )
 }
