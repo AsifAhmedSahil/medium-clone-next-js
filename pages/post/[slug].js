@@ -3,7 +3,7 @@ import ReadersNav from "../../components/ReadersNav";
 import Recomendation from "../../components/Recomendation";
 
 const style = {
-  content: "flex",
+  content: "flex ",
 };
 
 const Post = () => {

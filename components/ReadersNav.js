@@ -11,7 +11,7 @@ import sahil from  "../static/sahil.jpg"
 
 const style = {
   logoContainer: "cursor-pointer",
-  wrapper:"w-[5rem] h-screen flex  flex-col justify-between items-center p-[1rem]",
+  wrapper:" w-[5rem] h-screen flex  flex-col justify-between items-center p-[1rem]",
   iconContainer:"flex flex-col flex-1 justify-center gap-[1.4rem] text-2xl text-[#787878]",
   profileImageContainer:"w-[2.4rem] h-[2.4rem] rounded-full overflow-hidden place-items-center",
   profileImage:"object-cover"

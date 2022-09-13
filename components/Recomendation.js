@@ -8,7 +8,7 @@ import sahil from "../static/sahil.jpg";
 import JSLogo from "../static/jsLogo.png";
 
 const style = {
-  wrapper: "h-screen min-w-[10rem] max-w-[30rem] flex-[1.2] p-[2rem]",
+  wrapper: "h-screen min-w-[10rem] max-w-[30rem] flex-[1.2] p-[2rem] ",
   accentedButton:
     "flex items-cnter bg-black text-white justify-center py-[.6rem] rounded-full text-sm my-[2rem]",
   searchBar:
