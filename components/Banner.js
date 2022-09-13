@@ -1,6 +1,7 @@
 import Image from "next/image";
-import React from "react";
+
 import logo from "./../static/banner.png"
+import React from "react";
 
 const style = {
   accentedButton: "bg-black text-white py-2 px-3 rounded-full",
