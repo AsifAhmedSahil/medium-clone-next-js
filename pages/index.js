@@ -1,6 +1,8 @@
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import PostCard from "../components/PostCard";
+import { MediumContext } from "../context/mediumContext";
+import { useContext } from "react";
 
 const style = {
   postLists:
@@ -10,6 +12,9 @@ const style = {
   wrapper:"mx-auto"
 };
 export default function Home() {
+  const {posts} = useContext(MediumContext)
+
+  console.log(posts, "🔥 ")
   return (
     <div className={style.wrapper}>
       <Header />
