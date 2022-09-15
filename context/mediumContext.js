@@ -14,9 +14,41 @@ const MediumProvider = ({children}) =>{
         const getUsers  =async ()=>{
             const querySnapshot = await getDocs(collection(db,'users'))
     
-            querySnapshot.docs.map(doc => console.log(doc.data()))
+            setUsers(querySnapshot.docs.map(doc => {
+                return {
+                    id:doc.id,
+                    data:{
+                        ...doc.data()
+                    }
+                }
+            }))
         }
         getUsers()
+    },[])
+
+    useEffect(() =>{
+        const getPosts = async () =>{
+                const querySnapshot = await getDocs(collection(db,'articles'))
+
+                setPosts(querySnapshot.docs.map(doc => {
+                    return{
+                        id:doc.id,
+                        data:{
+                            body: doc.data().body,
+                            breif: doc.data().breif,
+                            category: doc.data().category,
+                            postlength: doc.data().postlength,
+                            title: doc.data().title,
+                            postOn: doc.data().postOn,
+                            postOn: doc.data().postOn,
+                            author: doc.data().author,
+                            bannerimage: doc.data().bannerimage
+                        }
+                    }
+                }))
+        }
+
+        getPosts()
     },[])
 
     return(
