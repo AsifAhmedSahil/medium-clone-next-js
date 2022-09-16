@@ -22,9 +22,16 @@ export default function Home() {
       <div className={style.main}>
         <div className={style.container}>
           <div className={style.postLists}>
-            <PostCard />
-            <PostCard />
-            <PostCard />
+
+
+          {posts.map(post =>(
+
+                <PostCard post={post} key={post.id} />
+
+
+          ))}
+
+            
           </div>
         </div>
       </div>
